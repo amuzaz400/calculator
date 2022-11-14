@@ -26,6 +26,7 @@ describe('Arithmetic', function() {
               done();
           });
     });
+    
     it('rejects missing operand2', function(done) {
       request.get('/arithmetic?operation=add&operand1=21')
           .expect(400)
