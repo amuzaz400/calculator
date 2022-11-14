@@ -8,6 +8,7 @@ describe('Arithmetic', function() {
               done();
           });
     });
+    
     it('rejects invalid operation', function(done) {
       request.get('/arithmetic?operation=foobar&operand1=21&operand2=21')
           .expect(400)
@@ -16,6 +17,7 @@ describe('Arithmetic', function() {
               done();
           });
     });
+    
     it('rejects missing operand1', function(done) {
       request.get('/arithmetic?operation=add&operand2=21')
           .expect(400)
